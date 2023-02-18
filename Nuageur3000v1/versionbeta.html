@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/taille.css" />
+    <link rel="icon" href="image/icone.png" />
+    <title>Nuageur3000v1</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="logo" src="image/bologo.png" alt="Logo d'un nuage"
+      /></a>
+      <h1 class="titre"><a href="index.html"> Nuageur3000v1</a></h1>
+    </header>
+
+    <main>
+      <nav>
+        <ul class="dropdown">
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a class="gen" href="#">Livres</a>
+            <ul class="submenu1">
+              <li>
+                <a href="livre.html">Tous les livres</a>
+                <ul class="submenu2">
+                  <li>
+                    <a href="livrecentre.html">Voyage au centre de la Terre</a>
+                  </li>
+                  <li>
+                    <a href="livre20.html">20 mille lieues sous les mers</a>
+                  </li>
+
+                  <li>
+                    <a href="livretour.html">Le tour du monde en 80 jours</a>
+                  </li>
+                  <li><a href="livremystere.html">L'Île Mystérieuse</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="gen" href="#">Comparaison des livres</a>
+                <ul class="submenu2">
+                  <li><a href="comparaisongen.html">Sans mots outils</a></li>
+                  <li><a href="comparaisonoutil.html">Avec mots outils</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="courant">
+            <a class="gen" href="#">Code</a>
+            <ul class="submenu1">
+              <li class="courant">
+                <a href="versionbeta.html">Version BETA</a>
+              </li>
+              <li><a href="versiona.html">Version A</a></li>
+              <li><a href="versionb.html">Version B</a></li>
+              <li><a href="versionc.html">Version C</a></li>
+              <li><a href="versionhtml.html">Version HTML</a></li>
+            </ul>
+          </li>
+          <li><a href="a_propos.html">À Propos</a></li>
+        </ul>
+      </nav>
+
+      <header class="codepres">
+        <h2>
+          <span class="ombreG">
+            Version BETA
+          </span>
+        </h2>
+        <p>
+          <span class="ombreP">
+            Toute première version du code <span class="lumiere"> C# </span> .
+          </span>
+        </p>
+      </header>
+
+      <section class="code">
+        <article>
+          <p>
+            Retourne pour le texte mit en paramêtre, une liste de tout les mots
+            qui y apparaissent et leurs nombres d'apparition, de manière brut
+            (pas de recherche de racine).
+            <br />
+            Sert de pilier à toutes les versions le précédent.
+          </p>
+          <div class="scroller">
+            <span class="normal"><br /> </span
+            ><span class="kw">using&nbsp;</span
+            ><span class="norm">System;<br /> </span
+            ><span class="kw">using&nbsp;</span
+            ><span class="norm">System.IO;<br /> </span
+            ><span class="kw">using&nbsp;</span
+            ><span class="norm">System.Collections.Generic;<br /> </span
+            ><span class="kw">class&nbsp;</span
+            ><span class="norm"
+              >nuageMot&nbsp;{<br />
+              &nbsp;&nbsp;</span
+            ><span class="kw">static&nbsp;void&nbsp;</span
+            ><span class="norm"
+              >Main&nbsp;(){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm">&gt;&nbsp;cherchemot=</span
+            ><span class="kw">new&nbsp;</span
+            ><span class="norm">Dictionary&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm"
+              >&gt;();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">string&nbsp;</span
+            ><span class="norm"
+              >fichier;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(</span
+            ><span class="slit"
+              >"Nom&nbsp;du&nbsp;fichier&nbsp;(avec&nbsp;.txt)&nbsp;:&nbsp;"</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//avec&nbsp;ou&nbsp;sans&nbsp;arborescence<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >fichier=Console.ReadLine();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">if&nbsp;</span
+            ><span class="norm">(File.Exists(fichier)==</span
+            ><span class="kw">true</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cherchemot=remplitDico(fichier);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche_dictionnaire(cherchemot);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;</span
+            ><span class="norm"
+              >{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(</span
+            ><span class="slit">"Le&nbsp;fichier&nbsp;"</span
+            ><span class="norm">+fichier+</span
+            ><span class="slit">"&nbsp;n'exsite&nbsp;pas&nbsp;!"</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;}<br />
+              <br />
+              &nbsp;&nbsp;</span
+            ><span class="com"
+              >//renvoie&nbsp;un&nbsp;dictionnaire,&nbsp;avec&nbsp;en&nbsp;clef&nbsp;le&nbsp;mot,&nbsp;et&nbsp;en&nbsp;valeur&nbsp;le&nbsp;nombre&nbsp;d'apparition&nbsp;du&nbsp;mot&nbsp;dans&nbsp;le&nbsp;texte,&nbsp;en&nbsp;parametre&nbsp;le&nbsp;nom&nbsp;du&nbsp;fichier<br /><br />
+              &nbsp;&nbsp;</span
+            ><span class="kw">public&nbsp;static&nbsp;</span
+            ><span class="norm">Dictionary&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm">&gt;&nbsp;remplitDico&nbsp;(</span
+            ><span class="kw">string&nbsp;</span
+            ><span class="norm"
+              >filename){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm">&gt;&nbsp;newDico=</span
+            ><span class="kw">new&nbsp;</span
+            ><span class="norm">Dictionary&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm"
+              >&gt;();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;StreamReader&nbsp;sr=File.OpenText(filename);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">string&nbsp;</span><span class="norm">ligne=</span
+            ><span class="slit">""</span
+            ><span class="norm"
+              >;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">while&nbsp;</span
+            ><span class="norm"
+              >(!(sr.EndOfStream)){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ligne=sr.ReadLine();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">string</span
+            ><span class="norm">[]&nbsp;lignedecoupe=ligne.Split(</span
+            ><span class="slit">"&nbsp;"</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">foreach&nbsp;</span><span class="norm">(</span
+            ><span class="kw">string&nbsp;</span
+            ><span class="norm">mot&nbsp;</span><span class="kw">in&nbsp;</span
+            ><span class="norm"
+              >lignedecoupe){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">string&nbsp;</span
+            ><span class="norm"
+              >motT=normalise(mot);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">if&nbsp;</span><span class="norm">(motT!=</span
+            ><span class="slit">""</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">if&nbsp;</span
+            ><span class="norm"
+              >(newDico.ContainsKey(motT))&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newDico[motT]+=</span
+            ><span class="nlit">1</span
+            ><span class="norm"
+              >;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;</span
+            ><span class="norm"
+              >{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newDico.Add(motT,&nbsp;</span
+            ><span class="nlit">1</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;sr.Close();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">return&nbsp;</span
+            ><span class="norm"
+              >newDico;<br />
+              &nbsp;&nbsp;}<br />
+              <br />
+              &nbsp;&nbsp;</span
+            ><span class="com"
+              >//&nbsp;Renvoie&nbsp;le&nbsp;mot&nbsp;mis&nbsp;en&nbsp;parametre&nbsp;normalise,&nbsp;sans&nbsp;"."&nbsp;ou&nbsp;","&nbsp;ou&nbsp;&nbsp;"'",&nbsp;mais&nbsp;garde&nbsp;les&nbsp;accents<br /><br />
+              &nbsp;&nbsp;</span
+            ><span class="kw">public&nbsp;static&nbsp;string&nbsp;</span
+            ><span class="norm">normalise&nbsp;(</span
+            ><span class="kw">string&nbsp;</span
+            ><span class="norm"
+              >Xmot){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">string&nbsp;</span><span class="norm">mot2=</span
+            ><span class="slit">""</span
+            ><span class="norm"
+              >;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">char&nbsp;</span
+            ><span class="norm"
+              >lettre;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">for&nbsp;</span><span class="norm">(</span
+            ><span class="kw">int&nbsp;</span><span class="norm">i=</span
+            ><span class="nlit">0</span
+            ><span class="norm"
+              >;&nbsp;i&lt;Xmot.Length;&nbsp;i++)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">if&nbsp;</span><span class="norm">((</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]&gt;=</span
+            ><span class="nlit">65&nbsp;</span
+            ><span class="norm">&amp;&amp;&nbsp;(</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span
+            ><span class="nlit">90</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lettre=(</span
+            ><span class="kw">char</span><span class="norm">)((</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]+</span
+            ><span class="nlit">32</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//mise&nbsp;en&nbsp;minuscule&nbsp;du&nbsp;characteres<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >mot2+=lettre.ToString();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//ajout&nbsp;de&nbsp;la&nbsp;lettre&nbsp;en&nbsp;mini&nbsp;<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;if&nbsp;</span
+            ><span class="norm">(((</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]&gt;=</span
+            ><span class="nlit">145&nbsp;</span
+            ><span class="norm">&amp;&amp;&nbsp;(</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span
+            ><span class="nlit">148</span
+            ><span class="norm">)&nbsp;||&nbsp;((</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]==</span
+            ><span class="nlit">8217</span
+            ><span class="norm"
+              >))&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//transforme&nbsp;les&nbsp;"â?",&nbsp;les&nbsp;"â??",&nbsp;les&nbsp;"â??"&nbsp;et&nbsp;les&nbsp;"â??"&nbsp;en&nbsp;"'"&nbsp;et&nbsp;le&nbsp;charactere&nbsp;chelou&nbsp;de&nbsp;8217&nbsp;(les&nbsp;guillemets)<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm">mot2+=(</span><span class="kw">char</span
+            ><span class="norm">)(</span><span class="nlit">39</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;if&nbsp;</span
+            ><span class="norm">((</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]&gt;=</span
+            ><span class="nlit">97&nbsp;</span
+            ><span class="norm">&amp;&amp;&nbsp;(</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span
+            ><span class="nlit">122</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//minuscules<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >mot2+=Xmot[i].ToString();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;if&nbsp;</span
+            ><span class="norm">((</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]==</span
+            ><span class="nlit">39&nbsp;</span
+            ><span class="norm">||&nbsp;(</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]==</span
+            ><span class="nlit">45&nbsp;</span
+            ><span class="norm">||&nbsp;(</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]==</span><span class="nlit">156</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//garde&nbsp;les&nbsp;"-"&nbsp;et&nbsp;les&nbsp;"'"&nbsp;et&nbsp;les&nbsp;"??"&nbsp;(les&nbsp;oe&nbsp;colle))<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >mot2+=Xmot[i].ToString();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;if&nbsp;</span
+            ><span class="norm">((</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]&gt;=</span
+            ><span class="nlit">192&nbsp;</span
+            ><span class="norm">&amp;&amp;&nbsp;(</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span
+            ><span class="nlit">221&nbsp;</span
+            ><span class="norm">&amp;&amp;&nbsp;(</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]!=</span
+            ><span class="nlit">215</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lettre=(</span
+            ><span class="kw">char</span><span class="norm">)((</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]+</span
+            ><span class="nlit">32</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//mise&nbsp;en&nbsp;minuscule&nbsp;du&nbsp;characteres&nbsp;speciaux&nbsp;sauf&nbsp;le&nbsp;"??"&nbsp;(caractere&nbsp;de&nbsp;multiplication)<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >mot2+=lettre.ToString();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;if&nbsp;</span
+            ><span class="norm">((</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]&gt;=</span
+            ><span class="nlit">224&nbsp;</span
+            ><span class="norm">&amp;&amp;&nbsp;(</span
+            ><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span
+            ><span class="nlit">255</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mot2+=Xmot[i].ToString();<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//garde&nbsp;les&nbsp;lettres&nbsp;avec&nbsp;accents<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm"
+              >}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">else&nbsp;if&nbsp;</span
+            ><span class="norm">((</span><span class="kw">int</span
+            ><span class="norm">)Xmot[i]==</span><span class="nlit">140</span
+            ><span class="norm"
+              >)&nbsp;{<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="com"
+              >//transforme&nbsp;"??"&nbsp;en&nbsp;"??"&nbsp;(les&nbsp;OE&nbsp;colle&nbsp;et&nbsp;oe&nbsp;colle)<br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="norm">mot2+=(</span><span class="kw">char</span
+            ><span class="norm">)(</span><span class="nlit">156</span
+            ><span class="norm"
+              >);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">return&nbsp;</span
+            ><span class="norm"
+              >mot2;<br />
+              &nbsp;&nbsp;}<br />
+              <br />
+              &nbsp;&nbsp;</span
+            ><span class="kw">public&nbsp;static&nbsp;void&nbsp;</span
+            ><span class="norm">affiche_dictionnaire&nbsp;(Dictionary&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm"
+              >&gt;&nbsp;Xtab){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span class="kw">foreach&nbsp;</span
+            ><span class="norm">(KeyValuePair&lt;</span
+            ><span class="kw">string</span><span class="norm">,&nbsp;</span
+            ><span class="kw">int</span
+            ><span class="norm">&gt;&nbsp;val&nbsp;</span
+            ><span class="kw">in&nbsp;</span
+            ><span class="norm"
+              >Xtab){<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(val.Key+</span
+            ><span class="slit">"&nbsp;:&nbsp;"</span
+            ><span class="norm"
+              >+val.Value);<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+              &nbsp;&nbsp;}<br />
+              <br />
+              }<br />
+              <br />
+            </span>
+          </div>
+          <p>
+            Exemple de retour de code (de la déclaration des droits de l'homme)
+            :
+          </p>
+          <span class="retourcode">
+            l'homme : 10 <br />
+            préambule : 1 <br />
+            considérant : 7 <br />
+            que : 20 <br />
+            la : 79 <br />
+            reconnaissance : 4 <br />
+            dignité : 5 <br />
+            inhérente : 1 <br />
+            à : 61 <br />
+            tous : 14 <br />
+          </span>
+          <p>
+            On peut remarquer que les mots vides ne sont pas encore enlevés, tel
+            que "la". <br />
+            Mais aussi que "l'homme" n'est pas encore séparé en "l" et "homme".
+          </p>
+          <section class="skip">
+            <p>
+              <span>
+                <a href="versiona.html">Étape suivante</a>
+              </span>
+            </p>
+          </section>
+          <footer>
+            <p>
+              Ce visuel est rendu possible grâce
+              <span>
+                <a
+                  href="http://dotnet.jku.at/applications/Cs2ToHtml/cs2html.aspx"
+                >
+                  .NET at JKU
+                </a>
+              </span>
+              (transforme un code c# en un joli html avec des span aux bons
+              endroits).
+            </p>
+            <p>
+              Ainsi que grâce a
+              <span>
+                <a href="https://codebeautify.org/csharpviewer">
+                  Code Beauty C# Viewer
+                </a>
+              </span>
+              (afin d'espacer correctement tout le code).
+            </p>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Version 2.35 du Nuageur3000v1</p>
+      <p>Par Paolo HOOGLAND et Charly FLU</p>
+      <p>
+        Elu le meilleur site par
+        <span><a href="index.html">Nuageur3000v1</a></span>
+      </p>
+    </footer>
+  </body>
+</html>

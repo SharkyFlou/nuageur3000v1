@@ -1,0 +1,804 @@
+/**************************************************************
+  Taille 14 pouces
+***************************************************************/
+
+@media all and (max-width: 1400px) {
+  .nuage a[data-weight="1"] {
+    --size: 1;
+  }
+  .nuage a[data-weight="2"] {
+    --size: 2;
+  }
+  .nuage a[data-weight="3"] {
+    --size: 3;
+  }
+  .nuage a[data-weight="4"] {
+    --size: 4;
+  }
+  .nuage a[data-weight="5"] {
+    --size: 5;
+  }
+  .nuage a[data-weight="6"] {
+    --size: 6;
+  }
+  .nuage a[data-weight="7"] {
+    --size: 7;
+  }
+  .nuage a[data-weight="8"] {
+    --size: 8;
+  }
+  .nuage a[data-weight="9"] {
+    --size: 9;
+  }
+  .nuage a[data-weight="10"] {
+    --size: 10;
+  }
+  .nuage a[data-weight="11"] {
+    --size: 11;
+  }
+  .nuage a[data-weight="12"] {
+    --size: 12;
+  }
+  .nuage a[data-weight="13"] {
+    --size: 13;
+  }
+  .nuage a[data-weight="14"] {
+    --size: 14;
+  }
+  .nuage a[data-weight="15"] {
+    --size: 15;
+  }
+  .nuage a[data-weight="16"] {
+    --size: 16;
+  }
+  .nuage a[data-weight="17"] {
+    --size: 17;
+  }
+  .nuage a[data-weight="18"] {
+    --size: 18;
+  }
+  .nuage a[data-weight="19"] {
+    --size: 19;
+  }
+  .nuage a[data-weight="20"] {
+    --size: 20;
+  }
+  .nuage a[data-weight="21"] {
+    --size: 21;
+  }
+  .nuage a[data-weight="22"] {
+    --size: 22;
+  }
+  .nuage a[data-weight="23"] {
+    --size: 23;
+  }
+  .nuage a[data-weight="24"] {
+    --size: 24;
+  }
+  .nuage a[data-weight="25"] {
+    --size: 25;
+  }
+  .nuage a[data-weight="26"] {
+    --size: 26;
+  }
+  .nuage a[data-weight="27"] {
+    --size: 27;
+  }
+  .nuage a[data-weight="28"] {
+    --size: 28;
+  }
+  .nuage a[data-weight="29"] {
+    --size: 29;
+  }
+  .nuage a[data-weight="30"] {
+    --size: 30;
+  }
+  .nuage a[data-weight="31"] {
+    --size: 31;
+  }
+  .nuage a[data-weight="32"] {
+    --size: 32;
+  }
+  .nuage a[data-weight="33"] {
+    --size: 33;
+  }
+  .nuage a[data-weight="34"] {
+    --size: 34;
+  }
+  .nuage a[data-weight="35"] {
+    --size: 35;
+  }
+
+  .nuageT a[data-weight="1"] {
+    --size: 0.66;
+  }
+  .nuageT a[data-weight="2"] {
+    --size: 1.32;
+  }
+  .nuageT a[data-weight="3"] {
+    --size: 1.98;
+  }
+  .nuageT a[data-weight="4"] {
+    --size: 2.64;
+  }
+  .nuageT a[data-weight="5"] {
+    --size: 3.3;
+  }
+  .nuageT a[data-weight="6"] {
+    --size: 3.96;
+  }
+  .nuageT a[data-weight="7"] {
+    --size: 4.62;
+  }
+  .nuageT a[data-weight="8"] {
+    --size: 5.28;
+  }
+  .nuageT a[data-weight="9"] {
+    --size: 5.94;
+  }
+  .nuageT a[data-weight="10"] {
+    --size: 6.6;
+  }
+  .nuageT a[data-weight="11"] {
+    --size: 7.26;
+  }
+  .nuageT a[data-weight="12"] {
+    --size: 7.92;
+  }
+  .nuageT a[data-weight="13"] {
+    --size: 8.58;
+  }
+  .nuageT a[data-weight="14"] {
+    --size: 9.24;
+  }
+  .nuageT a[data-weight="15"] {
+    --size: 9.9;
+  }
+  .nuageT a[data-weight="16"] {
+    --size: 10.56;
+  }
+  .nuageT a[data-weight="17"] {
+    --size: 11.22;
+  }
+  .nuageT a[data-weight="18"] {
+    --size: 11.88;
+  }
+  .nuageT a[data-weight="19"] {
+    --size: 12.54;
+  }
+  .nuageT a[data-weight="20"] {
+    --size: 13.2;
+  }
+  .nuageT a[data-weight="21"] {
+    --size: 13.86;
+  }
+  .nuageT a[data-weight="22"] {
+    --size: 14.52;
+  }
+  .nuageT a[data-weight="23"] {
+    --size: 15.18;
+  }
+  .nuageT a[data-weight="24"] {
+    --size: 15.84;
+  }
+  .nuageT a[data-weight="25"] {
+    --size: 16.5;
+  }
+  .nuageT a[data-weight="26"] {
+    --size: 17.16;
+  }
+  .nuageT a[data-weight="27"] {
+    --size: 17.82;
+  }
+  .nuageT a[data-weight="28"] {
+    --size: 18.48;
+  }
+  .nuageT a[data-weight="29"] {
+    --size: 19.14;
+  }
+  .nuageT a[data-weight="30"] {
+    --size: 19.8;
+  }
+  .nuageT a[data-weight="31"] {
+    --size: 20.46;
+  }
+  .nuageT a[data-weight="32"] {
+    --size: 21.12;
+  }
+  .nuageT a[data-weight="33"] {
+    --size: 21.78;
+  }
+  .nuageT a[data-weight="34"] {
+    --size: 22.44;
+  }
+  .nuageT a[data-weight="35"] {
+    --size: 23.1;
+  }
+}
+
+/**************************************************************
+  Taille tablette
+***************************************************************/
+
+@media all and (max-width: 1024px) {
+  .nuage a[data-weight="1"] {
+    --size: 0.66;
+  }
+  .nuage a[data-weight="2"] {
+    --size: 1.32;
+  }
+  .nuage a[data-weight="3"] {
+    --size: 1.98;
+  }
+  .nuage a[data-weight="4"] {
+    --size: 2.64;
+  }
+  .nuage a[data-weight="5"] {
+    --size: 3.3;
+  }
+  .nuage a[data-weight="6"] {
+    --size: 3.96;
+  }
+  .nuage a[data-weight="7"] {
+    --size: 4.62;
+  }
+  .nuage a[data-weight="8"] {
+    --size: 5.28;
+  }
+  .nuage a[data-weight="9"] {
+    --size: 5.94;
+  }
+  .nuage a[data-weight="10"] {
+    --size: 6.6;
+  }
+  .nuage a[data-weight="11"] {
+    --size: 7.26;
+  }
+  .nuage a[data-weight="12"] {
+    --size: 7.92;
+  }
+  .nuage a[data-weight="13"] {
+    --size: 8.58;
+  }
+  .nuage a[data-weight="14"] {
+    --size: 9.24;
+  }
+  .nuage a[data-weight="15"] {
+    --size: 9.9;
+  }
+  .nuage a[data-weight="16"] {
+    --size: 10.56;
+  }
+  .nuage a[data-weight="17"] {
+    --size: 11.22;
+  }
+  .nuage a[data-weight="18"] {
+    --size: 11.88;
+  }
+  .nuage a[data-weight="19"] {
+    --size: 12.54;
+  }
+  .nuage a[data-weight="20"] {
+    --size: 13.2;
+  }
+  .nuage a[data-weight="21"] {
+    --size: 13.86;
+  }
+  .nuage a[data-weight="22"] {
+    --size: 14.52;
+  }
+  .nuage a[data-weight="23"] {
+    --size: 15.18;
+  }
+  .nuage a[data-weight="24"] {
+    --size: 15.84;
+  }
+  .nuage a[data-weight="25"] {
+    --size: 16.5;
+  }
+  .nuage a[data-weight="26"] {
+    --size: 17.16;
+  }
+  .nuage a[data-weight="27"] {
+    --size: 17.82;
+  }
+  .nuage a[data-weight="28"] {
+    --size: 18.48;
+  }
+  .nuage a[data-weight="29"] {
+    --size: 19.14;
+  }
+  .nuage a[data-weight="30"] {
+    --size: 19.8;
+  }
+  .nuage a[data-weight="31"] {
+    --size: 20.46;
+  }
+  .nuage a[data-weight="32"] {
+    --size: 21.12;
+  }
+  .nuage a[data-weight="33"] {
+    --size: 21.78;
+  }
+  .nuage a[data-weight="34"] {
+    --size: 22.44;
+  }
+  .nuage a[data-weight="35"] {
+    --size: 23.1;
+  }
+
+  .nuageC a[data-weight="1"] {
+    --size: 0.4;
+  }
+  .nuageC a[data-weight="2"] {
+    --size: 0.8;
+  }
+  .nuageC a[data-weight="3"] {
+    --size: 1.2;
+  }
+  .nuageC a[data-weight="4"] {
+    --size: 1.6;
+  }
+  .nuageC a[data-weight="5"] {
+    --size: 2;
+  }
+  .nuageC a[data-weight="6"] {
+    --size: 2.4;
+  }
+  .nuageC a[data-weight="7"] {
+    --size: 2.8;
+  }
+  .nuageC a[data-weight="8"] {
+    --size: 3.2;
+  }
+  .nuageC a[data-weight="9"] {
+    --size: 3.6;
+  }
+  .nuageC a[data-weight="10"] {
+    --size: 4;
+  }
+  .nuageC a[data-weight="11"] {
+    --size: 4.4;
+  }
+  .nuageC a[data-weight="12"] {
+    --size: 4.8;
+  }
+  .nuageC a[data-weight="13"] {
+    --size: 5.2;
+  }
+  .nuageC a[data-weight="14"] {
+    --size: 5.6;
+  }
+  .nuageC a[data-weight="15"] {
+    --size: 6;
+  }
+  .nuageC a[data-weight="16"] {
+    --size: 6.4;
+  }
+  .nuageC a[data-weight="17"] {
+    --size: 6.8;
+  }
+  .nuageC a[data-weight="18"] {
+    --size: 7.2;
+  }
+  .nuageC a[data-weight="19"] {
+    --size: 7.6;
+  }
+  .nuageC a[data-weight="20"] {
+    --size: 8;
+  }
+  .nuageC a[data-weight="21"] {
+    --size: 8.4;
+  }
+  .nuageC a[data-weight="22"] {
+    --size: 8.8;
+  }
+  .nuageC a[data-weight="23"] {
+    --size: 9.2;
+  }
+  .nuageC a[data-weight="24"] {
+    --size: 9.6;
+  }
+  .nuageC a[data-weight="25"] {
+    --size: 10;
+  }
+
+  .nuageT a[data-weight="1"] {
+    --size: 0.5;
+  }
+  .nuageT a[data-weight="2"] {
+    --size: 1;
+  }
+  .nuageT a[data-weight="3"] {
+    --size: 1.5;
+  }
+  .nuageT a[data-weight="4"] {
+    --size: 2;
+  }
+  .nuageT a[data-weight="5"] {
+    --size: 2.5;
+  }
+  .nuageT a[data-weight="6"] {
+    --size: 3;
+  }
+  .nuageT a[data-weight="7"] {
+    --size: 3.5;
+  }
+  .nuageT a[data-weight="8"] {
+    --size: 4;
+  }
+  .nuageT a[data-weight="9"] {
+    --size: 4.5;
+  }
+  .nuageT a[data-weight="10"] {
+    --size: 5;
+  }
+  .nuageT a[data-weight="11"] {
+    --size: 5.5;
+  }
+  .nuageT a[data-weight="12"] {
+    --size: 6;
+  }
+  .nuageT a[data-weight="13"] {
+    --size: 6.5;
+  }
+  .nuageT a[data-weight="14"] {
+    --size: 7;
+  }
+  .nuageT a[data-weight="15"] {
+    --size: 7.5;
+  }
+  .nuageT a[data-weight="16"] {
+    --size: 8;
+  }
+  .nuageT a[data-weight="17"] {
+    --size: 8.5;
+  }
+  .nuageT a[data-weight="18"] {
+    --size: 9;
+  }
+  .nuageT a[data-weight="19"] {
+    --size: 9.5;
+  }
+  .nuageT a[data-weight="20"] {
+    --size: 10;
+  }
+  .nuageT a[data-weight="21"] {
+    --size: 10.5;
+  }
+  .nuageT a[data-weight="22"] {
+    --size: 11;
+  }
+  .nuageT a[data-weight="23"] {
+    --size: 11.5;
+  }
+  .nuageT a[data-weight="24"] {
+    --size: 12;
+  }
+  .nuageT a[data-weight="25"] {
+    --size: 12.5;
+  }
+  .nuageT a[data-weight="26"] {
+    --size: 13;
+  }
+  .nuageT a[data-weight="27"] {
+    --size: 13.5;
+  }
+  .nuageT a[data-weight="28"] {
+    --size: 14;
+  }
+  .nuageT a[data-weight="29"] {
+    --size: 14.5;
+  }
+  .nuageT a[data-weight="30"] {
+    --size: 15;
+  }
+  .nuageT a[data-weight="31"] {
+    --size: 15.5;
+  }
+  .nuageT a[data-weight="32"] {
+    --size: 16;
+  }
+  .nuageT a[data-weight="33"] {
+    --size: 16.5;
+  }
+  .nuageT a[data-weight="34"] {
+    --size: 17;
+  }
+  .nuageT a[data-weight="35"] {
+    --size: 17.5;
+  }
+}
+
+/**************************************************************
+  Taille téléphone
+***************************************************************/
+
+@media all and (max-width: 600px) {
+  .nuage a[data-weight="1"] {
+    --size: 0.5;
+  }
+  .nuage a[data-weight="2"] {
+    --size: 1;
+  }
+  .nuage a[data-weight="3"] {
+    --size: 1.5;
+  }
+  .nuage a[data-weight="4"] {
+    --size: 2;
+  }
+  .nuage a[data-weight="5"] {
+    --size: 2.5;
+  }
+  .nuage a[data-weight="6"] {
+    --size: 3;
+  }
+  .nuage a[data-weight="7"] {
+    --size: 3.5;
+  }
+  .nuage a[data-weight="8"] {
+    --size: 4;
+  }
+  .nuage a[data-weight="9"] {
+    --size: 4.5;
+  }
+  .nuage a[data-weight="10"] {
+    --size: 5;
+  }
+  .nuage a[data-weight="11"] {
+    --size: 5.5;
+  }
+  .nuage a[data-weight="12"] {
+    --size: 6;
+  }
+  .nuage a[data-weight="13"] {
+    --size: 6.5;
+  }
+  .nuage a[data-weight="14"] {
+    --size: 7;
+  }
+  .nuage a[data-weight="15"] {
+    --size: 7.5;
+  }
+  .nuage a[data-weight="16"] {
+    --size: 8;
+  }
+  .nuage a[data-weight="17"] {
+    --size: 8.5;
+  }
+  .nuage a[data-weight="18"] {
+    --size: 9;
+  }
+  .nuage a[data-weight="19"] {
+    --size: 9.5;
+  }
+  .nuage a[data-weight="20"] {
+    --size: 10;
+  }
+  .nuage a[data-weight="21"] {
+    --size: 10.5;
+  }
+  .nuage a[data-weight="22"] {
+    --size: 11;
+  }
+  .nuage a[data-weight="23"] {
+    --size: 11.5;
+  }
+  .nuage a[data-weight="24"] {
+    --size: 12;
+  }
+  .nuage a[data-weight="25"] {
+    --size: 12.5;
+  }
+  .nuage a[data-weight="26"] {
+    --size: 13;
+  }
+  .nuage a[data-weight="27"] {
+    --size: 13.5;
+  }
+  .nuage a[data-weight="28"] {
+    --size: 14;
+  }
+  .nuage a[data-weight="29"] {
+    --size: 14.5;
+  }
+  .nuage a[data-weight="30"] {
+    --size: 15;
+  }
+  .nuage a[data-weight="31"] {
+    --size: 15.5;
+  }
+  .nuage a[data-weight="32"] {
+    --size: 16;
+  }
+  .nuage a[data-weight="33"] {
+    --size: 16.5;
+  }
+  .nuage a[data-weight="34"] {
+    --size: 17;
+  }
+  .nuage a[data-weight="35"] {
+    --size: 17.5;
+  }
+
+  .nuageT a[data-weight="1"] {
+    --size: 0.45;
+  }
+  .nuageT a[data-weight="2"] {
+    --size: 0.9;
+  }
+  .nuageT a[data-weight="3"] {
+    --size: 1.35;
+  }
+  .nuageT a[data-weight="4"] {
+    --size: 1.8;
+  }
+  .nuageT a[data-weight="5"] {
+    --size: 2.25;
+  }
+  .nuageT a[data-weight="6"] {
+    --size: 2.7;
+  }
+  .nuageT a[data-weight="7"] {
+    --size: 3.15;
+  }
+  .nuageT a[data-weight="8"] {
+    --size: 3.6;
+  }
+  .nuageT a[data-weight="9"] {
+    --size: 4.05;
+  }
+  .nuageT a[data-weight="10"] {
+    --size: 4.5;
+  }
+  .nuageT a[data-weight="11"] {
+    --size: 4.95;
+  }
+  .nuageT a[data-weight="12"] {
+    --size: 5.4;
+  }
+  .nuageT a[data-weight="13"] {
+    --size: 5.85;
+  }
+  .nuageT a[data-weight="14"] {
+    --size: 6.3;
+  }
+  .nuageT a[data-weight="15"] {
+    --size: 6.75;
+  }
+  .nuageT a[data-weight="16"] {
+    --size: 7.2;
+  }
+  .nuageT a[data-weight="17"] {
+    --size: 7.65;
+  }
+  .nuageT a[data-weight="18"] {
+    --size: 8.1;
+  }
+  .nuageT a[data-weight="19"] {
+    --size: 8.55;
+  }
+  .nuageT a[data-weight="20"] {
+    --size: 9;
+  }
+  .nuageT a[data-weight="21"] {
+    --size: 9.45;
+  }
+  .nuageT a[data-weight="22"] {
+    --size: 9.9;
+  }
+  .nuageT a[data-weight="23"] {
+    --size: 10.35;
+  }
+  .nuageT a[data-weight="24"] {
+    --size: 10.8;
+  }
+  .nuageT a[data-weight="25"] {
+    --size: 11.25;
+  }
+  .nuageT a[data-weight="26"] {
+    --size: 11.7;
+  }
+  .nuageT a[data-weight="27"] {
+    --size: 12.15;
+  }
+  .nuageT a[data-weight="28"] {
+    --size: 12.6;
+  }
+  .nuageT a[data-weight="29"] {
+    --size: 13.05;
+  }
+  .nuageT a[data-weight="30"] {
+    --size: 13.5;
+  }
+  .nuageT a[data-weight="31"] {
+    --size: 13.95;
+  }
+  .nuageT a[data-weight="32"] {
+    --size: 14.4;
+  }
+  .nuageT a[data-weight="33"] {
+    --size: 14.85;
+  }
+  .nuageT a[data-weight="34"] {
+    --size: 15.3;
+  }
+  .nuageT a[data-weight="35"] {
+    --size: 15.75;
+  }
+  .nuageC a[data-weight="1"] {
+    --size: 0.35;
+  }
+  .nuageC a[data-weight="2"] {
+    --size: 0.7;
+  }
+  .nuageC a[data-weight="3"] {
+    --size: 1.05;
+  }
+  .nuageC a[data-weight="4"] {
+    --size: 1.4;
+  }
+  .nuageC a[data-weight="5"] {
+    --size: 1.75;
+  }
+  .nuageC a[data-weight="6"] {
+    --size: 2.1;
+  }
+  .nuageC a[data-weight="7"] {
+    --size: 2.45;
+  }
+  .nuageC a[data-weight="8"] {
+    --size: 2.8;
+  }
+  .nuageC a[data-weight="9"] {
+    --size: 3.15;
+  }
+  .nuageC a[data-weight="10"] {
+    --size: 3.5;
+  }
+  .nuageC a[data-weight="11"] {
+    --size: 3.85;
+  }
+  .nuageC a[data-weight="12"] {
+    --size: 4.2;
+  }
+  .nuageC a[data-weight="13"] {
+    --size: 4.55;
+  }
+  .nuageC a[data-weight="14"] {
+    --size: 4.9;
+  }
+  .nuageC a[data-weight="15"] {
+    --size: 5.25;
+  }
+  .nuageC a[data-weight="16"] {
+    --size: 5.6;
+  }
+  .nuageC a[data-weight="17"] {
+    --size: 5.95;
+  }
+  .nuageC a[data-weight="18"] {
+    --size: 6.3;
+  }
+  .nuageC a[data-weight="19"] {
+    --size: 6.65;
+  }
+  .nuageC a[data-weight="20"] {
+    --size: 7;
+  }
+  .nuageC a[data-weight="21"] {
+    --size: 7.35;
+  }
+  .nuageC a[data-weight="22"] {
+    --size: 7.7;
+  }
+  .nuageC a[data-weight="23"] {
+    --size: 8.05;
+  }
+  .nuageC a[data-weight="24"] {
+    --size: 8.4;
+  }
+  .nuageC a[data-weight="25"] {
+    --size: 8.75;
+  }
+}

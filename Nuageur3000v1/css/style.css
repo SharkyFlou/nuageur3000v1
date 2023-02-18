@@ -1,0 +1,531 @@
+/*************************************************
+* General                                        *
+*************************************************/
+
+body {
+  background-color: #f79d65;
+  color: whitesmoke;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  background-color: #1a1f68;
+  width: 100%;
+}
+
+/****************************************************
+*  Nav et titre                            *
+****************************************************/
+
+nav ul li.courant {
+  background-color: #1a1f68;
+}
+
+body > header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-image: url("../image/fondnuage.png"),
+    linear-gradient(rgba(56, 65, 183, 1), rgba(247, 157, 101, 1));
+  background-color: #2f3899;
+}
+
+nav {
+  box-shadow: 3px 3px 10px black;
+  background-color: #3841b7;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
+}
+
+nav li li {
+  font-size: 0.9em;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 4rem;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 25px;
+}
+
+.dropdown > li,
+.dropdown > a {
+  display: inline-block;
+}
+
+.dropdown li {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.dropdown ul {
+  width: 100%;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  transition: background-color 0.4s;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown a:hover {
+  background-color: #1a1f68;
+}
+
+.submenu1,
+.submenu2 {
+  position: absolute;
+  box-shadow: 3px 3px 10px black;
+  background-color: #3841b7;
+  display: none;
+  padding: 0;
+}
+
+.submenu1 li,
+.submenu2 li {
+  width: 100%;
+  height: 3rem;
+}
+
+.submenu1 {
+  left: 0;
+  top: 100%;
+}
+
+.submenu2 {
+  left: 100%;
+  top: 0;
+}
+
+.dropdown li:hover > .submenu1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submenu1 li:hover > .submenu2 {
+  display: block;
+}
+
+.gen {
+  cursor: default;
+}
+/**************************************
+                  Header
+**************************************/
+
+.logo {
+  max-width: 100px;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.titre a {
+  color: white;
+  margin-left: 1em;
+  text-shadow: 0 0 2px lightgray;
+  text-decoration: none;
+}
+
+.titre a,
+.logo {
+  filter: drop-shadow(0 0 3px #f79d65);
+  transition-property: filter;
+  transition-duration: 300ms;
+}
+
+.titre a :hover,
+.logo:hover {
+  filter: drop-shadow(0 0 7px #f79d65);
+}
+
+/**************************************
+                  Footer
+**************************************/
+
+body > footer {
+  text-align: center;
+  line-height: 50%;
+  background-image: url("../image/fondnuage.png"),
+    linear-gradient(rgba(247, 157, 101, 1), rgba(56, 65, 183, 1));
+  border-top: solid 1px white;
+  display: inline-block;
+  width: 100%;
+  height: 6.5rem;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+/*************************************
+                Accueil
+**************************************/
+
+.mainpage {
+  padding-top: 4em;
+  padding-bottom: 2em;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  background-image: url("../image/julesVerneEtSignature.png");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5%;
+  width: 95%;
+}
+
+.imgspace {
+  max-width: 50%;
+}
+
+section.code article,
+.texto,
+.qnuage,
+.grandnuage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 3px white;
+  padding: 10px;
+  width: 50%;
+  box-shadow: 3px 3px 10px black;
+  background-color: #2f3899;
+}
+
+.texto {
+  max-width: 50%;
+}
+
+.texto h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.texto p {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+span a {
+  text-decoration: none;
+  color: #f79d65;
+  transition: background-color, width, color, 0.5s;
+  width: 0%;
+}
+
+span a:hover {
+  background-color: #e76f51;
+  color: whitesmoke;
+  width: 90%;
+}
+
+/******************************************************
+                      A propos + tout livres
+*****************************************************/
+
+.parent {
+  justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  padding-bottom: 8rem;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin: 1.5rem;
+  font-size: 3rem;
+}
+
+.parent > section {
+  margin-top: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.auteur2 > article,
+.auteur1 > article {
+  margin-left: 11em;
+}
+
+.auteur1 {
+  background-image: url("../image/charly.png");
+  transition-duration: 3s;
+  transition-property: background-image;
+}
+
+.auteur2 {
+  background-image: url("../image/paolo.png");
+  transition-duration: 3s;
+  transition-property: background-image;
+}
+
+.auteur1:hover {
+  background-image: url("../image/charlyouvert.png");
+}
+
+.auteur2:hover {
+  background-image: url("../image/paolocursed.png");
+}
+
+.mention {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.mention > article {
+  width: 90%;
+  border-top: solid 1px white;
+}
+
+.mention p {
+  font-size: 1.25rem;
+}
+/**************************
+          Tout livre seul, et un peu auteur
+**************************/
+
+.livrepres p {
+  text-align: center;
+  font-size: 1em;
+}
+
+.livre20,
+.livrecentre,
+.livreretour,
+.livremystere,
+.auteur2,
+.auteur1 {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.livre20 p,
+.livrecentre p,
+.livreretour p,
+.livremystere p {
+  text-align: justify;
+  padding-right: 10px;
+}
+
+.livre20 > article,
+.livrecentre > article,
+.livreretour > article,
+.livremystere > article,
+.auteur1 > article,
+.auteur2 > article {
+  padding-left: 0.5rem;
+  border: 1px solid white;
+  background-color: #2f3899;
+  width: 13em;
+  box-shadow: 3px 3px 10px black;
+}
+
+.auteur2,
+.auteur1,
+.livre20,
+.livrecentre,
+.livreretour,
+.livremystere {
+  width: 40%;
+  height: 26em;
+}
+.auteur2 > article,
+.auteur1 > article,
+.livre20 > article,
+.livrecentre > article,
+.livreretour > article,
+.livremystere > article {
+  margin-top: 20%;
+  margin-left: 50%;
+  opacity: 0.95;
+}
+
+.livre20 {
+  background-image: url("../image/20livre.jpg");
+}
+.livrecentre {
+  background-image: url("../image/centre.jpg");
+}
+.livreretour {
+  background-image: url("../image/tour.jpg");
+}
+.livremystere {
+  background-image: url("../image/ile.jpg");
+}
+
+.auteur1 h2,
+.auteur2 h2,
+.livre20 h2,
+.livrecentre h2,
+.livreretour h2,
+.livremystere h2 {
+  font-size: 1.4em;
+  margin: 0.6em;
+  line-height: 1em;
+}
+
+.auteur1 h4,
+.auteur2 h4,
+.livre20 h4,
+.livrecentre h4,
+.livreretour h4,
+.livremystere h4 {
+  font-size: 0.85em;
+  margin: 0.3em;
+}
+
+.auteur1 p,
+.auteur2 p,
+.livre20 p,
+.livrecentre p,
+.livreretour p,
+.livremystere p {
+  font-size: 0.8em;
+}
+
+/**************************
+          Version code
+**************************/
+
+.retourcode {
+  color: whitesmoke;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #333;
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  display: block;
+  font-size: 1.25rem;
+}
+
+span.lumiereP {
+  color: lightgray;
+  text-shadow: 0 0 2px lightgray;
+}
+
+span.lumiereG {
+  color: lightgray;
+  text-shadow: 0 0 4px lightgray;
+}
+
+span.ombreG {
+  color: lightgray;
+  text-shadow: 3px 3px 0 black;
+}
+
+span.ombreP {
+  color: lightgray;
+  text-shadow: 2px 2px 0 black;
+}
+
+.codepres p {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.code p {
+  width: 100%;
+  text-align: justify;
+}
+
+section.code {
+  display: flex;
+  padding-bottom: 1em;
+  width: 100%;
+  justify-content: center;
+}
+section.code article {
+  background-color: #2f3899;
+  width: 92%;
+}
+
+.scroller {
+  margin: 0 2em;
+  border: 2px solid #1a1f68;
+  background-color: #a8a8a8;
+  width: 80%;
+  height: 40em;
+  overflow: scroll;
+  scrollbar-width: thin;
+  color: black;
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+span.kw {
+  color: blue;
+}
+
+span.norm {
+  color: black;
+}
+
+span.com {
+  color: green;
+}
+
+span.slit {
+  color: firebrick;
+}
+
+.code footer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+  font-size: 0.7em;
+}
+
+.code footer p {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+}
+
+.skip {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.skip :first-child {
+  text-align: left;
+}
+
+.skip :last-child {
+  text-align: right;
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/taille.css" />
+    <link rel="icon" href="image/icone.png" />
+    <title>Nuageur3000v1</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="logo" src="image/bologo.png" alt="Logo d'un nuage"
+      /></a>
+      <h1 class="titre"><a href="index.html"> Nuageur3000v1</a></h1>
+    </header>
+
+    <main>
+        <nav>
+            <ul class="dropdown">
+              <li><a href="index.html">Accueil</a></li>
+              <li>
+                <a class="gen" href="#">Livres</a>
+                <ul class="submenu1">
+                  <li>
+                    <a href="livre.html">Tous les livres</a>
+                    <ul class="submenu2">
+                        <li>
+                            <a href="livrecentre.html">Voyage au centre de la Terre</a>
+                          </li>
+                      <li>
+                        <a href="livre20.html">20 mille lieues sous les mers</a>
+                      </li>
+                      
+                      
+                      <li>
+                        <a href="livretour.html">Le tour du monde en 80 jours</a>
+                      </li>
+                      <li><a href="livremystere.html">L'Île Mystérieuse</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="gen" href="#">Comparaison des livres</a>
+                    <ul class="submenu2">
+                      <li><a href="comparaisongen.html">Sans mots outils</a></li>
+                      <li><a href="comparaisonoutil.html">Avec mots outils</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="courant">
+                <a class="gen" href="#">Code</a>
+                <ul class="submenu1">
+                  <li><a href="versionbeta.html">Version BETA</a></li>
+                  <li><a href="versiona.html">Version A</a></li>
+                  <li class="courant"><a href="versionb.html">Version B</a></li>
+                  <li><a href="versionc.html">Version C</a></li>
+                  <li><a href="versionhtml.html">Version HTML</a></li>
+                </ul>
+              </li>
+              <li><a href="a_propos.html">À Propos</a></li>
+            </ul>
+          </nav>
+
+      <header class="codepres">
+        <h2>
+          <span class="ombreG">
+            Version B
+          </span>
+        </h2>
+        <p>
+          <span class="ombreP">
+            Deuxième version du code demandé.
+          </span>
+        </p>
+      </header>
+
+      <section class="code">
+        <article>
+          <p>
+            Fait la même chose que le code A, et possède les même problèmes, 
+            à part le fait que les mots se raccourcissent trop: un algorithme vérifie
+            que chaque mot possède une répétition minimum de voyelle-consonne (VC).
+          </p>
+          <div class="scroller">
+              <span class="normal"><br>
+              </span><span class="kw">using&nbsp;</span><span class="norm">System;<br>
+              </span><span class="kw">using&nbsp;</span><span class="norm">System.IO;<br>
+              </span><span class="kw">using&nbsp;</span><span class="norm">System.Collections.Generic;<br>
+              </span><span class="kw">class&nbsp;</span><span class="norm">nuageMot&nbsp;{<br>
+              &nbsp;&nbsp;</span><span class="kw">static&nbsp;void&nbsp;</span><span class="norm">Main&nbsp;(){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;cherchemot=</span><span class="kw">new&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">fichier;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(</span><span class="slit">"Nom&nbsp;du&nbsp;fichier&nbsp;(avec&nbsp;.txt)&nbsp;:&nbsp;"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//avec&nbsp;ou&nbsp;sans&nbsp;arborescence
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">fichier=Console.ReadLine();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(File.Exists(fichier)==</span><span class="kw">true</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//remplit&nbsp;le&nbsp;dictionnaire
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">cherchemot=remplitDico(fichier);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//trie&nbsp;par&nbsp;ordre&nbsp;alphabetique
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//cherchemot=trieBrutDico(cherchemot);
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//affiche&nbsp;dictionnaire
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//affiche_dictionnaire(cherchemot);
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//fonction&nbsp;qui&nbsp;retourne&nbsp;le&nbsp;nouveau&nbsp;dictionnai
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dicRacine1=transformation(cherchemot,&nbsp;</span><span class="slit">"etape1.txt"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dicRacine2=transformation(dicRacine1,&nbsp;</span><span class="slit">"etape2.txt"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dicRacine3=transformation(dicRacine2,&nbsp;</span><span class="slit">"etape3.txt"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//affiche&nbsp;nouveau&nbsp;dictionnaire
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">dicRacine3=trieBrutDico(dicRacine3);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche_dictionnaire(dicRacine3);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;</span><span class="norm">{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(</span><span class="slit">"Le&nbsp;fichier&nbsp;"</span><span class="norm">+fichier+</span><span class="slit">"&nbsp;n'exsite&nbsp;pas&nbsp;!"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//renvoie&nbsp;un&nbsp;dictionnaire,&nbsp;avec&nbsp;en&nbsp;clef&nbsp;le&nbsp;mot,&nbsp;et&nbsp;en&nbsp;valeur&nbsp;le&nbsp;nombre&nbsp;d'apparition&nbsp;du&nbsp;mot&nbsp;dans&nbsp;le&nbsp;text;,&nbsp;en&nbsp;parametre&nbsp;le&nbsp;nom&nbsp;du&nbsp;fichier
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;remplitDico&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">filename){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;newDico=</span><span class="kw">new&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;List&lt;</span><span class="kw">string</span><span class="norm">&gt;&nbsp;mot_inter=</span><span class="kw">new&nbsp;</span><span class="norm">List&lt;</span><span class="kw">string</span><span class="norm">&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//Lecture&nbsp;du&nbsp;texte
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">StreamReader&nbsp;sr=File.OpenText(filename);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">ligne=</span><span class="slit">""</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;mot_inter=mot_interdit(</span><span class="slit">"mot_vide.txt"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//ajoute&nbsp;les&nbsp;mots&nbsp;+&nbsp;ocurrences&nbsp;au&nbsp;dictionnaire
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(!(sr.EndOfStream)){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ligne=sr.ReadLine();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string</span><span class="norm">[]&nbsp;lignedecoupe=ligne.Split(</span><span class="slit">"&nbsp;"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//fait&nbsp;le&nbsp;traitement&nbsp;de&nbsp;chaque&nbsp;ligne
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">newDico=traitement(newDico,&nbsp;lignedecoupe,&nbsp;mot_inter);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;sr.Close();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">newDico;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//fonction&nbsp;racine&nbsp;de&nbsp;remplitDico
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;traitement&nbsp;(Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dic,&nbsp;</span><span class="kw">string</span><span class="norm">[]&nbsp;ligne,&nbsp;List&lt;</span><span class="kw">string</span><span class="norm">&gt;&nbsp;interdit){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">foreach&nbsp;</span><span class="norm">(</span><span class="kw">string&nbsp;</span><span class="norm">mot&nbsp;</span><span class="kw">in&nbsp;</span><span class="norm">ligne){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//normalise&nbsp;chaque&nbsp;mot&nbsp;de&nbsp;chaque&nbsp;ligne
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">motT=normalise(mot);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;deux&nbsp;mots&nbsp;sont&nbsp;divises&nbsp;par&nbsp;une&nbsp;apostrophe
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string</span><span class="norm">[]&nbsp;test=motT.Split(</span><span class="slit">"'"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">foreach&nbsp;</span><span class="norm">(</span><span class="kw">string&nbsp;</span><span class="norm">motY&nbsp;</span><span class="kw">in&nbsp;</span><span class="norm">test){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;le&nbsp;mot&nbsp;n'est&nbsp;pas&nbsp;vide&nbsp;ET&nbsp;le&nbsp;mot&nbsp;n'est&nbsp;pas&nbsp;dans&nbsp;la&nbsp;liste&nbsp;des&nbsp;mots&nbsp;interdits
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(motY!=</span><span class="slit">""&nbsp;</span><span class="norm">&amp;&amp;&nbsp;!estDans(motY,&nbsp;interdit))&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(dic.ContainsKey(motY))&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dic[motY]+=</span><span class="nlit">1</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;</span><span class="norm">{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dic.Add(motY,&nbsp;</span><span class="nlit">1</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">dic;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//fonction&nbsp;qui&nbsp;retourne&nbsp;la&nbsp;liste&nbsp;de&nbsp;tous&nbsp;les&nbsp;mots&nbsp;"vides"
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;</span><span class="norm">List&lt;</span><span class="kw">string</span><span class="norm">&gt;&nbsp;mot_interdit&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">filename2){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;List&lt;</span><span class="kw">string</span><span class="norm">&gt;&nbsp;listemotvide=</span><span class="kw">new&nbsp;</span><span class="norm">List&lt;</span><span class="kw">string</span><span class="norm">&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;StreamReader&nbsp;sr2=File.OpenText(filename2);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">ligne;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(!(sr2.EndOfStream)){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ligne=sr2.ReadLine();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listemotvide.Add(ligne);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;sr2.Close();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">listemotvide;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//&nbsp;Renvoie&nbsp;le&nbsp;mot&nbsp;mis&nbsp;en&nbsp;parametre&nbsp;normalise,&nbsp;sans&nbsp;"."&nbsp;ou&nbsp;","&nbsp;ou&nbsp;&nbsp;"'",&nbsp;mais&nbsp;garde&nbsp;les&nbsp;accents
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;string&nbsp;</span><span class="norm">normalise&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">Xmot){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">mot2=</span><span class="slit">""</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">char&nbsp;</span><span class="norm">lettre;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">i=</span><span class="nlit">0</span><span class="norm">;&nbsp;i&lt;Xmot.Length;&nbsp;i++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">((</span><span class="kw">int</span><span class="norm">)Xmot[i]&gt;=</span><span class="nlit">65&nbsp;</span><span class="norm">&amp;&amp;&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span><span class="nlit">90</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lettre=(</span><span class="kw">char</span><span class="norm">)((</span><span class="kw">int</span><span class="norm">)Xmot[i]+</span><span class="nlit">32</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//mise&nbsp;en&nbsp;minuscule&nbsp;du&nbsp;characteres
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">mot2+=lettre.ToString();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//ajout&nbsp;de&nbsp;la&nbsp;lettre&nbsp;en&nbsp;mini
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;if&nbsp;</span><span class="norm">(((</span><span class="kw">int</span><span class="norm">)Xmot[i]&gt;=</span><span class="nlit">145&nbsp;</span><span class="norm">&amp;&amp;&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span><span class="nlit">148</span><span class="norm">)&nbsp;||&nbsp;((</span><span class="kw">int</span><span class="norm">)Xmot[i]==</span><span class="nlit">8217</span><span class="norm">))&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//transforme&nbsp;les&nbsp;"â?",&nbsp;les&nbsp;"â??",&nbsp;les&nbsp;"â??"&nbsp;et&nbsp;les&nbsp;"â??"&nbsp;en&nbsp;"'"&nbsp;et&nbsp;le&nbsp;charactere&nbsp;chelou&nbsp;de&nbsp;8217&nbsp;(les&nbsp;guillemets)
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">mot2+=(</span><span class="kw">char</span><span class="norm">)(</span><span class="nlit">39</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;if&nbsp;</span><span class="norm">((</span><span class="kw">int</span><span class="norm">)Xmot[i]&gt;=</span><span class="nlit">97&nbsp;</span><span class="norm">&amp;&amp;&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span><span class="nlit">122</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//minuscules
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">mot2+=Xmot[i].ToString();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;if&nbsp;</span><span class="norm">((</span><span class="kw">int</span><span class="norm">)Xmot[i]==</span><span class="nlit">39&nbsp;</span><span class="norm">||&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]==</span><span class="nlit">45&nbsp;</span><span class="norm">||&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]==</span><span class="nlit">156</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//garde&nbsp;les&nbsp;"-"&nbsp;et&nbsp;les&nbsp;"'"&nbsp;et&nbsp;les&nbsp;"??"&nbsp;(les&nbsp;oe&nbsp;colle))
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">mot2+=Xmot[i].ToString();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;if&nbsp;</span><span class="norm">((</span><span class="kw">int</span><span class="norm">)Xmot[i]&gt;=</span><span class="nlit">192&nbsp;</span><span class="norm">&amp;&amp;&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span><span class="nlit">221&nbsp;</span><span class="norm">&amp;&amp;&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]!=</span><span class="nlit">215</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lettre=(</span><span class="kw">char</span><span class="norm">)((</span><span class="kw">int</span><span class="norm">)Xmot[i]+</span><span class="nlit">32</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//mise&nbsp;en&nbsp;minuscule&nbsp;du&nbsp;characteres&nbsp;speciaux&nbsp;sauf&nbsp;le&nbsp;"??"&nbsp;(caractere&nbsp;de&nbsp;multiplication)
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">mot2+=lettre.ToString();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;if&nbsp;</span><span class="norm">((</span><span class="kw">int</span><span class="norm">)Xmot[i]&gt;=</span><span class="nlit">224&nbsp;</span><span class="norm">&amp;&amp;&nbsp;(</span><span class="kw">int</span><span class="norm">)Xmot[i]&lt;=</span><span class="nlit">255</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mot2+=Xmot[i].ToString();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//garde&nbsp;les&nbsp;lettres&nbsp;avec&nbsp;accents
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;if&nbsp;</span><span class="norm">((</span><span class="kw">int</span><span class="norm">)Xmot[i]==</span><span class="nlit">140</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//transforme&nbsp;"??"&nbsp;en&nbsp;"??"&nbsp;(les&nbsp;OE&nbsp;colle&nbsp;et&nbsp;oe&nbsp;colle)
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">mot2+=(</span><span class="kw">char</span><span class="norm">)(</span><span class="nlit">156</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">mot2;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//affiche&nbsp;le&nbsp;dictionnaire
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;void&nbsp;</span><span class="norm">affiche_dictionnaire&nbsp;(Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;Xtab){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">foreach&nbsp;</span><span class="norm">(KeyValuePair&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;val&nbsp;</span><span class="kw">in&nbsp;</span><span class="norm">Xtab){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Write(val.Key+</span><span class="slit">"&nbsp;"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">i=</span><span class="nlit">0</span><span class="norm">;&nbsp;i&lt;</span><span class="nlit">12</span><span class="norm">-val.Key.Length;&nbsp;i++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Write(</span><span class="slit">"&nbsp;"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(val.Value);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//retourne&nbsp;true&nbsp;si&nbsp;le&nbsp;mot&nbsp;est&nbsp;dans&nbsp;la&nbsp;liste&nbsp;des&nbsp;mots&nbsp;interdits,&nbsp;false&nbsp;sinon
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;bool&nbsp;</span><span class="norm">estDans&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">Xmot,&nbsp;List&lt;</span><span class="kw">string</span><span class="norm">&gt;&nbsp;Xliste){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">bool&nbsp;</span><span class="norm">trouve=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">i=</span><span class="nlit">0</span><span class="norm">;&nbsp;i&lt;Xliste.Count&nbsp;&amp;&amp;&nbsp;!trouve;&nbsp;i++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(Xmot==Xliste[i])&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trouve=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">trouve;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//trie&nbsp;le&nbsp;dictionnaire&nbsp;par&nbsp;ordre&nbsp;decroissant&nbsp;d'apparition(permet&nbsp;une&nbsp;meilleure&nbsp;lecture&nbsp;de&nbsp;celui-ci)
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;trieBrutDico&nbsp;(Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dico){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">clefmax=</span><span class="slit">""</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">int&nbsp;</span><span class="norm">chiffremax=</span><span class="nlit">99999999</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dicotrie=</span><span class="kw">new&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(dico.Count&gt;</span><span class="nlit">0</span><span class="norm">){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">foreach&nbsp;</span><span class="norm">(KeyValuePair&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;val&nbsp;</span><span class="kw">in&nbsp;</span><span class="norm">dico){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(chiffremax&gt;val.Value)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chiffremax=val.Value;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clefmax=val.Key;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dico.Remove(clefmax);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dicotrie.Add(clefmax,&nbsp;chiffremax);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chiffremax=</span><span class="nlit">99999999</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">dicotrie;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//renvoie&nbsp;true&nbsp;si&nbsp;Xmot&nbsp;finit&nbsp;par&nbsp;Xtermi,&nbsp;false&nbsp;sinon
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;bool&nbsp;</span><span class="norm">comparaison&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">Xmot,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">Xtermi){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">bool&nbsp;</span><span class="norm">renvoie=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(Xmot.Length&gt;Xtermi.Length)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//verifie&nbsp;si&nbsp;taille&nbsp;du&nbsp;mot&nbsp;plus&nbsp;grand&nbsp;que&nbsp;la&nbsp;taille&nbsp;de&nbsp;la&nbsp;terminaison
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">((Xmot.Substring(Xmot.Length-Xtermi.Length,&nbsp;Xtermi.Length))==Xtermi)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//verifie&nbsp;si&nbsp;la&nbsp;terminaison&nbsp;est&nbsp;dans&nbsp;la&nbsp;fin&nbsp;du&nbsp;mot
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">renvoie=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">renvoie;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//renvoie&nbsp;le&nbsp;mot&nbsp;modifie,&nbsp;-1&nbsp;si&nbsp;la&nbsp;contrainte&nbsp;VC&nbsp;n'est&nbsp;pas&nbsp;respecte
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;string&nbsp;</span><span class="norm">remplacement&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">Xmot,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">Xtermi,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">Xparam,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">nbr){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">nvmot=</span><span class="slit">""</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">int&nbsp;</span><span class="norm">repet=</span><span class="kw">int</span><span class="norm">.Parse(nbr);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">a=</span><span class="nlit">0</span><span class="norm">;&nbsp;a&lt;(Xmot.Length-Xtermi.Length);&nbsp;a++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//creer&nbsp;le&nbsp;nouveau&nbsp;mot&nbsp;sans&nbsp;la&nbsp;terminaison,&nbsp;nous&nbsp;aurions&nbsp;pu&nbsp;aussi&nbsp;utiliser&nbsp;simplement&nbsp;Substring
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">nvmot+=Xmot[a];<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(Xparam!=</span><span class="slit">"epsilon"</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;colone&nbsp;2&nbsp;de&nbsp;etape&nbsp;1&nbsp;differente&nbsp;de&nbsp;epsilon,&nbsp;rajoute&nbsp;la&nbsp;colonne&nbsp;2
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">b=</span><span class="nlit">0</span><span class="norm">;&nbsp;b&lt;(Xparam.Length);&nbsp;b++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nvmot+=Xparam[b];<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(compteVC(nvmot)&lt;=repet)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;la&nbsp;contrainte&nbsp;de&nbsp;repetition&nbsp;de&nbsp;VC&nbsp;n'est&nbsp;pas&nbsp;respecte,&nbsp;renvoie&nbsp;-1
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">nvmot=</span><span class="slit">"-1"</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">nvmot;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//fonction&nbsp;qui&nbsp;retourne&nbsp;une&nbsp;liste&nbsp;avec&nbsp;toutes&nbsp;les&nbsp;terminaisons&nbsp;(etape&nbsp;1)
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;</span><span class="norm">List&lt;</span><span class="kw">string</span><span class="norm">[]&gt;&nbsp;terminaison&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">filepath){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;List&lt;</span><span class="kw">string</span><span class="norm">[]&gt;&nbsp;l_terminaison=</span><span class="kw">new&nbsp;</span><span class="norm">List&lt;</span><span class="kw">string</span><span class="norm">[]&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;StreamReader&nbsp;sr=File.OpenText(filepath);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">ligne;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//lecture&nbsp;du&nbsp;fichier&nbsp;+&nbsp;addition&nbsp;a&nbsp;la&nbsp;lsite
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(!(sr.EndOfStream)){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ligne=sr.ReadLine();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string</span><span class="norm">[]&nbsp;lignedecoupe=ligne.Split(</span><span class="slit">"&nbsp;"</span><span class="norm">);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//creation&nbsp;d'une&nbsp;liste&nbsp;de&nbsp;tableaux
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">l_terminaison.Add(lignedecoupe);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">l_terminaison;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//fonction&nbsp;qui&nbsp;retourne&nbsp;un&nbsp;dictionnaire&nbsp;compose&nbsp;de&nbsp;racines
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;transformation&nbsp;(Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dicOG,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">filepath){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dicoRacine=</span><span class="kw">new&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;();<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;List&lt;</span><span class="kw">string</span><span class="norm">[]&gt;&nbsp;liste_terminaison1=terminaison(filepath);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//pour&nbsp;chaque&nbsp;mot&nbsp;deja&nbsp;traite
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">foreach&nbsp;</span><span class="norm">(KeyValuePair&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;val&nbsp;</span><span class="kw">in&nbsp;</span><span class="norm">dicOG){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">racine=val.Key;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">bool&nbsp;</span><span class="norm">trouve=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">i=</span><span class="nlit">0</span><span class="norm">;&nbsp;i&lt;liste_terminaison1.Count&nbsp;&amp;&amp;&nbsp;!trouve;&nbsp;i++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;le&nbsp;mot&nbsp;est&nbsp;comparable
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(comparaison(val.Key,&nbsp;liste_terminaison1[i][</span><span class="nlit">1</span><span class="norm">]))&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//stockage&nbsp;de&nbsp;la&nbsp;racine
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">racine=remplacement(val.Key,&nbsp;liste_terminaison1[i][</span><span class="nlit">1</span><span class="norm">],&nbsp;liste_terminaison1[i][</span><span class="nlit">2</span><span class="norm">],&nbsp;liste_terminaison1[i][</span><span class="nlit">0</span><span class="norm">]);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(racine!=</span><span class="slit">"-1"</span><span class="norm">)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trouve=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;</span><span class="norm">{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;racine=val.Key;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//evite&nbsp;un&nbsp;bug&nbsp;ou&nbsp;cela&nbsp;renvoie&nbsp;-1&nbsp;car&nbsp;derniere&nbsp;terminaison&nbsp;teste
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remplitDico1(</span><span class="kw">ref</span><span class="norm">dicoRacine,&nbsp;racine,&nbsp;val.Value);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">dicoRacine;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//fonction&nbsp;qui&nbsp;remplit&nbsp;le&nbsp;dictionnaire&nbsp;de&nbsp;racines
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;void&nbsp;</span><span class="norm">remplitDico1&nbsp;(</span><span class="kw">ref&nbsp;</span><span class="norm">Dictionary&lt;</span><span class="kw">string</span><span class="norm">,&nbsp;</span><span class="kw">int</span><span class="norm">&gt;&nbsp;dico1,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">Xracine,&nbsp;</span><span class="kw">int&nbsp;</span><span class="norm">Xval){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">bool&nbsp;</span><span class="norm">test=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">foreach&nbsp;</span><span class="norm">(</span><span class="kw">string&nbsp;</span><span class="norm">val&nbsp;</span><span class="kw">in&nbsp;</span><span class="norm">dico1.Keys){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;le&nbsp;mot&nbsp;trie&nbsp;auparavant&nbsp;correspond&nbsp;a&nbsp;la&nbsp;racine,&nbsp;comme&nbsp;un&nbsp;ContainsKey
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(val==Xracine)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(test)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;le&nbsp;mot&nbsp;existe&nbsp;deja
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">dico1[Xracine]+=Xval;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">else&nbsp;</span><span class="norm">{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//si&nbsp;le&nbsp;mot&nbsp;n'existe&nbsp;pas
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">dico1.Add(Xracine,&nbsp;Xval);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//renvoie&nbsp;le&nbsp;nombre&nbsp;de&nbsp;repitition&nbsp;de&nbsp;VC&nbsp;dans&nbsp;Xmot
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;int&nbsp;</span><span class="norm">compteVC&nbsp;(</span><span class="kw">string&nbsp;</span><span class="norm">Xmot){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//string&nbsp;de&nbsp;toutes&nbsp;les&nbsp;voyelles&nbsp;possibles
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">voyelles=</span><span class="slit">"a?¤???&nbsp;e?©?¨?«??i???®o?¶?´u?????»y??"</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//dans&nbsp;le&nbsp;preview&nbsp;de&nbsp;l'html&nbsp;les&nbsp;caractere&nbsp;precedent&nbsp;seront&nbsp;buge,&nbsp;car&nbsp;les&nbsp;voyelles&nbsp;avec&nbsp;accents&nbsp;sont&nbsp;aussi&nbsp;affiche&nbsp;ici
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">int&nbsp;</span><span class="norm">compteurVC=</span><span class="nlit">0</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">int&nbsp;</span><span class="norm">longueur=</span><span class="nlit">0</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">bool&nbsp;</span><span class="norm">voyelle,&nbsp;consonne;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">int&nbsp;</span><span class="norm">motlong=Xmot.Length;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(longueur!=motlong){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consonne=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voyelle=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(longueur!=motlong&nbsp;&amp;&amp;&nbsp;charDansString(Xmot[longueur],&nbsp;voyelles)){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//cherche&nbsp;une&nbsp;consonne&nbsp;consonne,&nbsp;doit&nbsp;skip&nbsp;au&nbsp;moins&nbsp;une&nbsp;voyelle
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">voyelle=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longueur++;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">while&nbsp;</span><span class="norm">(longueur!=motlong&nbsp;&amp;&amp;&nbsp;!charDansString(Xmot[longueur],&nbsp;voyelles)){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="com">//cherche&nbsp;une&nbsp;voyelle,&nbsp;doit&nbsp;skip&nbsp;au&nbsp;moins&nbsp;une&nbsp;consonne
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="norm">consonne=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longueur++;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(consonne&nbsp;&amp;&amp;&nbsp;voyelle)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compteurVC++;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">compteurVC;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              &nbsp;&nbsp;</span><span class="com">//renvoie&nbsp;true&nbsp;si&nbsp;chara&nbsp;dans&nbsp;Xmot,&nbsp;false&nbsp;sinon
+              <br>
+              &nbsp;&nbsp;</span><span class="kw">public&nbsp;static&nbsp;bool&nbsp;</span><span class="norm">charDansString&nbsp;(</span><span class="kw">char&nbsp;</span><span class="norm">chara,&nbsp;</span><span class="kw">string&nbsp;</span><span class="norm">Xmot){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">bool&nbsp;</span><span class="norm">trouve=</span><span class="kw">false</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">for&nbsp;</span><span class="norm">(</span><span class="kw">int&nbsp;</span><span class="norm">i=</span><span class="nlit">0</span><span class="norm">;&nbsp;i&lt;Xmot.Length&nbsp;&amp;&amp;&nbsp;!trouve;&nbsp;i++)&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">if&nbsp;</span><span class="norm">(chara==Xmot[i])&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trouve=</span><span class="kw">true</span><span class="norm">;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="kw">return&nbsp;</span><span class="norm">trouve;<br>
+              &nbsp;&nbsp;}<br>
+              <br>
+              }<br>
+              <br>
+              </span>
+          </div>
+            <p>
+              Exemple de retour de code (de la Déclaration des Droits de l'Homme)
+            :
+            </p>
+            <span class="retourcode">
+                cont &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 <br>
+                nat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 <br>
+                social &nbsp;&nbsp;&nbsp; 8 <br>
+                pays &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 <br>
+                nul &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 <br>
+                protec &nbsp;&nbsp;&nbsp; 8 <br>
+                national &nbsp; 9 <br> 
+                homm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11 <br>
+                égal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13 <br>
+                person &nbsp;&nbsp;&nbsp; 23 <br>
+                lib &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28 <br>
+                articl &nbsp;&nbsp;&nbsp; 29 <br>
+                droit &nbsp;&nbsp;&nbsp;&nbsp; 63 <br>
+            </span>
+            <p>
+              Cette fois ci, les mots ne sont plus écrasés en une seule lettre: <br>
+              L'ancien "c" est en réalité "cont", et "n" était "nul".
+            </p>
+            <section class="skip">
+                <p>
+                    <span>
+                        <a href="versiona.html">Étape précédente</a>
+                      </span>
+                    </p>
+                    <p>
+                  <span>
+                    <a href="versionc.html">Étape suivante</a>
+                  </span>
+                </p>
+              </section>
+            <footer>
+              <p>
+                Ce visuel est rendu possible grâce
+                <span>
+                  <a
+                    href="http://dotnet.jku.at/applications/Cs2ToHtml/cs2html.aspx"
+                  >
+                    .NET at JKU
+                  </a>
+                </span>
+                (transforme un code c# en un joli html avec des span aux bons
+                endroits).
+              </p>
+              <p>
+                Ainsi que grâce a
+                <span>
+                  <a href="https://codebeautify.org/csharpviewer">
+                    Code Beauty C# Viewer
+                  </a>
+                </span>
+                (afin d'espacer correctement tout le code).
+              </p>
+            </footer>
+          </article>
+      </section>
+    </main>
+
+    <footer>
+        <p>Version 2.35 du Nuageur3000v1</p>
+        <p>Par Paolo HOOGLAND et Charly FLU</p>
+        <p>
+            Elu le meilleur site par
+            <span><a href="index.html">Nuageur3000v1</a></span>
+          </p>
+    </footer>
+  </body>
+</html>

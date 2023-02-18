@@ -1,0 +1,590 @@
+/***********
+    Nuage individuel
+********/
+
+section.code article,
+.libre,
+.libre2 {
+  padding-bottom: 2rem;
+  margin: 2rem;
+  margin-bottom: 0;
+  padding: 0.5rem;
+  border: solid 2px white;
+  box-shadow: 3px 3px 10px black;
+  background-color: #2f3899;
+}
+
+section.code article {
+  width: 65%;
+}
+
+.libre,
+.libre2 {
+  width: 75%;
+  align-items: center;
+}
+
+.libre h3,
+.libre2 h3 {
+  font-size: 2.5rem;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.livreindividuel {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.livreindividuel > p {
+  font-style: italic;
+  text-align: center;
+  height: 100%;
+  margin: 0 2em;
+  font-size: 1.25rem;
+}
+
+.double {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.double2 {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  transition: height 1.4s;
+}
+
+.nuage,
+.nuage2,
+.nuageC,
+.nuageT {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0.5rem;
+  pointer-events: none;
+  min-width: 50%;
+}
+
+.nuage {
+  line-height: 3.5rem;
+}
+
+.nuage2 {
+  line-height: 0.5rem;
+}
+
+.nuage,
+.nuage2,
+.exp,
+.nuageC,
+.nuageT {
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.exp {
+  align-content: flex-start;
+  width: 35%;
+}
+
+.nuage a,
+.nuage2 a,
+.nuageC a,
+.nuageT a {
+  text-decoration: none;
+  --color: #ff9770;
+  color: var(--color);
+  display: block;
+  padding: 0.25rem 0.25rem;
+  position: relative;
+  font-size: calc(var(--size) * 0.15rem + 0.25rem);
+}
+
+.intro,
+.intro2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.intro {
+  border-left: solid white 1px;
+  padding-left: 2rem;
+}
+
+.intro2 {
+  border-right: solid white 1px;
+  padding-right: 2rem;
+}
+
+.intro h4,
+.intro2 h4 {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*****************
+    Nuage1
+*****************/
+
+.nuage a[data-weight="1"] {
+  --size: 8;
+}
+.nuage a[data-weight="2"] {
+  --size: 9;
+}
+.nuage a[data-weight="3"] {
+  --size: 10;
+}
+.nuage a[data-weight="4"] {
+  --size: 11;
+}
+.nuage a[data-weight="5"] {
+  --size: 12;
+}
+.nuage a[data-weight="6"] {
+  --size: 13;
+}
+.nuage a[data-weight="7"] {
+  --size: 14;
+}
+.nuage a[data-weight="8"] {
+  --size: 15;
+}
+.nuage a[data-weight="9"] {
+  --size: 16;
+}
+.nuage a[data-weight="10"] {
+  --size: 17;
+}
+.nuage a[data-weight="11"] {
+  --size: 18;
+}
+.nuage a[data-weight="12"] {
+  --size: 19;
+}
+.nuage a[data-weight="13"] {
+  --size: 20;
+}
+.nuage a[data-weight="14"] {
+  --size: 21;
+}
+.nuage a[data-weight="15"] {
+  --size: 22;
+}
+.nuage a[data-weight="16"] {
+  --size: 23;
+}
+.nuage a[data-weight="17"] {
+  --size: 24;
+}
+.nuage a[data-weight="18"] {
+  --size: 25;
+}
+.nuage a[data-weight="19"] {
+  --size: 27;
+}
+.nuage a[data-weight="20"] {
+  --size: 29;
+}
+.nuage a[data-weight="21"] {
+  --size: 31;
+}
+.nuage a[data-weight="22"] {
+  --size: 33;
+}
+.nuage a[data-weight="23"] {
+  --size: 35;
+}
+.nuage a[data-weight="24"] {
+  --size: 37;
+}
+.nuage a[data-weight="25"] {
+  --size: 39;
+}
+.nuage a[data-weight="26"] {
+  --size: 41;
+}
+
+.nuage a[data-weight="27"] {
+  --size: 43;
+}
+
+.nuage a[data-weight="28"] {
+  --size: 45;
+}
+
+.nuage a[data-weight="29"] {
+  --size: 47;
+}
+
+.nuage a[data-weight="30"] {
+  --size: 49;
+}
+
+.nuage a[data-weight="31"] {
+  --size: 51;
+}
+
+.nuage a[data-weight="32"] {
+  --size: 53;
+}
+
+.nuage a[data-weight="33"] {
+  --size: 55;
+}
+
+.nuage a[data-weight="34"] {
+  --size: 57;
+}
+
+.nuage a[data-weight="35"] {
+  --size: 60;
+}
+
+/*****************
+    Nuage2
+*****************/
+
+.nuage2 a[data-weight="1"] {
+  --size: 5;
+}
+.nuage2 a[data-weight="2"] {
+  --size: 5.5;
+}
+.nuage2 a[data-weight="3"] {
+  --size: 6;
+}
+.nuage2 a[data-weight="4"] {
+  --size: 6.5;
+}
+.nuage2 a[data-weight="5"] {
+  --size: 7;
+}
+.nuage2 a[data-weight="6"] {
+  --size: 7.5;
+}
+.nuage2 a[data-weight="7"] {
+  --size: 8;
+}
+.nuage2 a[data-weight="8"] {
+  --size: 8.5;
+}
+.nuage2 a[data-weight="9"] {
+  --size: 9;
+}
+.nuage2 a[data-weight="10"] {
+  --size: 9.5;
+}
+.nuage2 a[data-weight="11"] {
+  --size: 10;
+}
+.nuage2 a[data-weight="12"] {
+  --size: 10.5;
+}
+.nuage2 a[data-weight="13"] {
+  --size: 11;
+}
+.nuage2 a[data-weight="14"] {
+  --size: 11.5;
+}
+.nuage2 a[data-weight="15"] {
+  --size: 12;
+}
+.nuage2 a[data-weight="16"] {
+  --size: 12.5;
+}
+.nuage2 a[data-weight="17"] {
+  --size: 13;
+}
+.nuage2 a[data-weight="18"] {
+  --size: 13.5;
+}
+.nuage2 a[data-weight="19"] {
+  --size: 14;
+}
+.nuage2 a[data-weight="20"] {
+  --size: 14.5;
+}
+.nuage2 a[data-weight="21"] {
+  --size: 15;
+}
+.nuage2 a[data-weight="22"] {
+  --size: 16;
+}
+.nuage2 a[data-weight="23"] {
+  --size: 17;
+}
+.nuage2 a[data-weight="24"] {
+  --size: 18;
+}
+.nuage2 a[data-weight="25"] {
+  --size: 20;
+}
+
+/******
+Meganuage
+******/
+
+.desc {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qnuage,
+.grandnuage {
+  margin: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.qnuage {
+  flex-flow: row wrap;
+}
+
+.grandnuage {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grandnuage > ul {
+  width: 75%;
+  line-height: 4.5rem;
+}
+
+.qnuage section {
+  width: 45%;
+}
+
+.nuageC {
+  width: 90%;
+  line-height: 2rem;
+}
+
+.intro3 {
+  border-top: solid 2px white;
+  text-align: justify;
+  text-align-last: center;
+  width: 85%;
+}
+
+.intro3 p {
+  text-align: justify;
+}
+
+.intro3 h3 {
+  text-align: center;
+}
+
+.nuageC a[data-weight="1"] {
+  --size: 2.5;
+}
+.nuageC a[data-weight="2"] {
+  --size: 3;
+}
+.nuageC a[data-weight="3"] {
+  --size: 3.5;
+}
+.nuageC a[data-weight="4"] {
+  --size: 4;
+}
+.nuageC a[data-weight="5"] {
+  --size: 4.5;
+}
+.nuageC a[data-weight="6"] {
+  --size: 5;
+}
+.nuageC a[data-weight="7"] {
+  --size: 5.5;
+}
+.nuageC a[data-weight="8"] {
+  --size: 6;
+}
+.nuageC a[data-weight="9"] {
+  --size: 6.5;
+}
+.nuageC a[data-weight="10"] {
+  --size: 7;
+}
+.nuageC a[data-weight="11"] {
+  --size: 7.5;
+}
+.nuageC a[data-weight="12"] {
+  --size: 8;
+}
+.nuageC a[data-weight="13"] {
+  --size: 8.5;
+}
+.nuageC a[data-weight="14"] {
+  --size: 9;
+}
+.nuageC a[data-weight="15"] {
+  --size: 9.5;
+}
+.nuageC a[data-weight="16"] {
+  --size: 10;
+}
+.nuageC a[data-weight="17"] {
+  --size: 10.5;
+}
+.nuageC a[data-weight="18"] {
+  --size: 11;
+}
+.nuageC a[data-weight="19"] {
+  --size: 11.5;
+}
+.nuageC a[data-weight="20"] {
+  --size: 12;
+}
+.nuageC a[data-weight="21"] {
+  --size: 12.5;
+}
+.nuageC a[data-weight="22"] {
+  --size: 13;
+}
+.nuageC a[data-weight="23"] {
+  --size: 14;
+}
+.nuageC a[data-weight="24"] {
+  --size: 16;
+}
+.nuageC a[data-weight="25"] {
+  --size: 18;
+}
+
+/*final*/
+
+.nuageT a[data-weight="1"] {
+  --size: 5;
+}
+.nuageT a[data-weight="2"] {
+  --size: 6;
+}
+.nuageT a[data-weight="3"] {
+  --size: 7;
+}
+.nuageT a[data-weight="4"] {
+  --size: 8;
+}
+.nuageT a[data-weight="5"] {
+  --size: 9;
+}
+.nuageT a[data-weight="6"] {
+  --size: 10;
+}
+.nuageT a[data-weight="7"] {
+  --size: 11;
+}
+.nuageT a[data-weight="8"] {
+  --size: 12;
+}
+.nuageT a[data-weight="9"] {
+  --size: 13;
+}
+.nuageT a[data-weight="10"] {
+  --size: 14;
+}
+.nuageT a[data-weight="11"] {
+  --size: 15;
+}
+.nuageT a[data-weight="12"] {
+  --size: 16;
+}
+.nuageT a[data-weight="13"] {
+  --size: 17;
+}
+.nuageT a[data-weight="14"] {
+  --size: 18;
+}
+.nuageT a[data-weight="15"] {
+  --size: 19;
+}
+.nuageT a[data-weight="16"] {
+  --size: 20;
+}
+.nuageT a[data-weight="17"] {
+  --size: 21;
+}
+.nuageT a[data-weight="18"] {
+  --size: 22;
+}
+.nuageT a[data-weight="19"] {
+  --size: 23;
+}
+.nuageT a[data-weight="20"] {
+  --size: 24;
+}
+.nuageT a[data-weight="21"] {
+  --size: 25;
+}
+.nuageT a[data-weight="22"] {
+  --size: 26;
+}
+.nuageT a[data-weight="23"] {
+  --size: 27;
+}
+.nuageT a[data-weight="24"] {
+  --size: 28;
+}
+.nuageT a[data-weight="25"] {
+  --size: 29;
+}
+.nuageT a[data-weight="26"] {
+  --size: 30;
+}
+
+.nuageT a[data-weight="27"] {
+  --size: 32;
+}
+
+.nuageT a[data-weight="28"] {
+  --size: 34;
+}
+
+.nuageT a[data-weight="29"] {
+  --size: 36;
+}
+
+.nuageT a[data-weight="30"] {
+  --size: 38;
+}
+
+.nuageT a[data-weight="31"] {
+  --size: 40;
+}
+
+.nuageT a[data-weight="32"] {
+  --size: 42;
+}
+
+.nuageT a[data-weight="33"] {
+  --size: 45;
+}
+
+.nuageT a[data-weight="34"] {
+  --size: 48;
+}
+
+.nuageT a[data-weight="35"] {
+  --size: 51;
+}

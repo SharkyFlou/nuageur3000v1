@@ -1,0 +1,207 @@
+@media all and (max-width: 1400px) {
+  body {
+    font-size: 1.3em;
+  }
+
+  /***************************
+   livre + a propos
+   **************************/
+  .auteur2,
+  .auteur1,
+  .livre20,
+  .livrecentre,
+  .livreretour,
+  .livremystere {
+    height: 20em;
+  }
+  .auteur1 h2,
+  .auteur2 h2,
+  .livre20 h2,
+  .livrecentre h2,
+  .livreretour h2,
+  .livremystere h2 {
+    font-size: 1.2em;
+    margin: 0.4em;
+  }
+
+  .auteur1 h4,
+  .auteur2 h4,
+  .livre20 h4,
+  .livrecentre h4,
+  .livreretour h4,
+  .livremystere h4 {
+    font-size: 0.75em;
+    margin: 0.2em;
+  }
+
+  .auteur1 p,
+  .auteur2 p,
+  .livre20 p,
+  .livrecentre p,
+  .livreretour p,
+  .livremystere p {
+    font-size: 0.69em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .livrepres p {
+    font-size: 0.9em;
+  }
+
+  .livreindividuel p {
+    font-size: 0.9em;
+  }
+  .auteur2 > article,
+  .auteur1 > article,
+  .livre20 > article,
+  .livrecentre > article,
+  .livreretour > article,
+  .livremystere > article {
+    margin-left: 48%;
+  }
+
+  /**************************
+  Nuage
+  ************************/
+
+  .grandnuage > ul {
+    line-height: 2.2rem;
+  }
+  .nuage {
+    line-height: 2.5rem;
+  }
+  .nuageC {
+    line-height: 1.4rem;
+  }
+
+  /**************************
+  Footer
+  ************************/
+  body > footer {
+    font-size: 0.9rem;
+  }
+
+  /**************************
+  Accueil
+  ************************/
+  .texto h1 {
+    font-size: 3rem;
+  }
+
+  .texto p {
+    font-size: 1.1rem;
+  }
+
+  /**************************
+  Code
+  ************************/
+
+  .retourcode {
+    font-size: 1.1rem;
+  }
+
+  .scroller {
+    font-size: 1.1rem;
+  }
+  .code footer {
+    font-size: 0.65em;
+  }
+}
+
+/**************************************************************
+  Taille tablette
+***************************************************************/
+
+@media all and (max-width: 1024px) {
+  body {
+    font-size: 1em;
+  }
+
+  /*****************************
+  A propros
+  *****************************/
+  .auteur2,
+  .auteur1,
+  .livre20,
+  .livrecentre,
+  .livreretour,
+  .livremystere {
+    width: 20em;
+    height: 20em;
+  }
+  .livre20 > article,
+  .livrecentre > article,
+  .livreretour > article,
+  .livremystere > article,
+  .auteur1 > article,
+  .auteur2 > article {
+    width: 20em;
+  }
+
+  /**************************
+  Code
+  ************************/
+
+  .retourcode {
+    font-size: 0.9rem;
+  }
+
+  .scroller {
+    font-size: 0.9rem;
+  }
+
+  /**************************
+  Nuage
+  ************************/
+
+  .nuage {
+    line-height: 1.5rem;
+  }
+  .nuageC {
+    line-height: 0.8rem;
+  }
+  .grandnuage > ul {
+    line-height: 1.3rem;
+  }
+}
+
+/**************************************************************
+  Taille téléphone
+***************************************************************/
+
+@media all and (max-width: 600px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  /**************************
+  Nuage
+  ************************/
+  .nuage {
+    line-height: 1.1rem;
+  }
+  .nuageC {
+    line-height: 0.7rem;
+  }
+  .grandnuage > ul {
+    line-height: 1.2rem;
+  }
+  .libre,
+  .libre2 {
+    width: 95%;
+  }
+  .libre h3,
+  .libre2 h3 {
+    font-size: 2rem;
+  }
+
+  /**************************
+  nav
+  ************************/
+  nav li {
+    font-size: 0.8em;
+  }
+}
