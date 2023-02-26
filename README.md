@@ -1,3 +1,8 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 # Nuageur3000v1 ☁
 
 Nuageur3000v1 is a static website, created for a school project where the goal was to create a website with word clouds.
@@ -23,3 +28,13 @@ The latest version is `question4_codehtmlcss.css`.
 
 # License 📜
 The source code is licensed under MIT License. For more information see [http://www.gnu.org/licenses/agpl-3.0.txt](https://opensource.org/license/mit/) or LICENSE.txt.
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/SharkyFlou/nuageur3000v1.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
