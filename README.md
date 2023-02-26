@@ -46,12 +46,11 @@ I do not take any contributions, this is just a closed school project.
 ## License 📜
 The source code is licensed under MIT License. For more information see [http://www.gnu.org/licenses/agpl-3.0.txt](https://opensource.org/license/mit/) or LICENSE.txt.
 
-https://github.com/SharkyFlou/nuageur3000v1/edit/main/README.md
 
 [CSS.logo]: https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css&logoColor=white
-[CSS-url]: css.com
+[CSS-url]: http://css.com
 [HTML.logo]: https://img.shields.io/badge/HTML-20232A?style=for-the-badge&logo=html&logoColor=61DAFB
-[HTML-url]: html.com
+[HTML-url]: http://html.com
 
 [contributors-shield]: https://img.shields.io/github/contributors/SharkyFlou/nuageur3000v1.svg?style=for-the-badge
 [contributors-url]: https://github.com/SharkyFlou/nuageur3000v1/graphs/contributors
